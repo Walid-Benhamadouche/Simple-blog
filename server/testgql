@@ -1,0 +1,29 @@
+mutation($_id: String!, $userID: String, $title: String, $content: String, $img: String){
+  updatePost(_id: $_id, userID: $userID, title: $title, content: $content, img: $img){
+    userID
+    title
+    content
+  }
+}# Write your query or mutation here
+query get{
+  user{
+    _id
+    name
+    posts{
+      _id
+      userID
+      title
+      content
+      img
+    }
+  }
+}
+
+
+{
+  "_id": "6353f05390ba86c63235f0d0",
+  "userID": "63530d2e1b587783b05ae477",
+  "title": "PostM",
+  "content": "Post from mutation updated",
+  "img": "changed image string"
+}
